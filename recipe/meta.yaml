@@ -8,6 +8,8 @@ package:
 source:
   url: https://github.com/stepan-tsirkin/wannier-berri/archive/master.tar.gz
   sha256: 8e5ba5ad9e17767d2b2985de50a1ecf10c5a604af1471034aa01ffb18628d595
+  patches:
+    - indentation.patch
 
 build:
   noarch: python
