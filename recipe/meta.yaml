@@ -34,6 +34,7 @@ requirements:
     - termcolor
     - pyfiglet
     - pyfftw
+    - fortio
 
 test:
   imports:
