@@ -37,6 +37,8 @@ requirements:
     - fortio
     - packaging
     - numba
+    - matplotlib-base
+    - ray-core
 
 test:
   imports:
