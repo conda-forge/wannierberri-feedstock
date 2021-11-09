@@ -1,5 +1,5 @@
 {% set name = "wannierberri" %}
-{% set version = "0.7.2" %}
+{% set version = "0.10.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,18 +7,16 @@ package:
 
 source:
   url: https://github.com/stepan-tsirkin/wannier-berri/archive/master.tar.gz
-  sha256: 8e5ba5ad9e17767d2b2985de50a1ecf10c5a604af1471034aa01ffb18628d595
-  patches:
-    - indentation.patch
+  sha256: 03b6732240deecd87e417209eecec886677610fd7efc1bed73cb07f24f2d5bef
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
     - numpy
     - scipy
@@ -28,7 +26,7 @@ requirements:
     - termcolor
     - pyfiglet
   run:
-    - python
+    - python >=3.6
     - numpy
     - scipy
     - lazy-property
@@ -36,6 +34,11 @@ requirements:
     - termcolor
     - pyfiglet
     - pyfftw
+    - fortio
+    - packaging
+    - numba
+    - matplotlib-base
+    - ray-core
 
 test:
   imports:
@@ -50,7 +53,7 @@ about:
   license: GPL-2.0-only
   license_family: GPL
   license_file: LICENSE
-  summary: 'Advanced tool for Wannier interpolation and integration of k-space integrals'
+  summary: Advanced tool for Wannier interpolation and integration of k-space integrals
 
   description: |
     Evaluation of k-space integrals of Berry curvature, orbital moment and 
