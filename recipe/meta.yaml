@@ -36,6 +36,7 @@ requirements:
     - pyfftw
     - fortio
     - packaging
+    - numba
 
 test:
   imports:
