@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/jan-janssen/wannier-berri/archive/refs/tags/v{{ version }}.tar.gz
+  url: https://github.com/stepan-tsirkin/wannier-berri/archive/refs/tags/v{{ version }}.tar.gz
   sha256: dae1e31b051b81f2bf7fdcf20fd26616d24f298b9a56e47be29443c2c3dc7453
   patches:
     - init.patch
