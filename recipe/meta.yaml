@@ -41,6 +41,7 @@ requirements:
     - numba
     - matplotlib-base
     - ray-core
+    - spglib
 
 test:
   imports:
