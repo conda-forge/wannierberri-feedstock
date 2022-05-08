@@ -42,6 +42,7 @@ requirements:
     - matplotlib-base
     - ray-core
     - spglib
+    - sympy
 
 test:
   imports:
