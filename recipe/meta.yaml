@@ -8,8 +8,6 @@ package:
 source:
   url: https://github.com/stepan-tsirkin/wannier-berri/archive/refs/tags/v{{ version }}.tar.gz
   sha256: 3c23a1024f50973d80cca1d841bf0aa862ff3fd3bf5c016f14483c56e21ed88b
-  patches:
-    - init.patch
 
 build:
   noarch: python
