@@ -36,7 +36,7 @@ requirements:
     - pyfftw
     - fortio
     - packaging
-    - numba
+    - numba >=0.55.2
     - matplotlib-base
     - ray-core
     - spglib
