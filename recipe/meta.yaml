@@ -1,5 +1,5 @@
 {% set name = "wannierberri" %}
-{% set version = "0.13.4" %}
+{% set version = "0.13.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/stepan-tsirkin/wannier-berri/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 29a03d402b7747ac5f1d996095b19c1b9610fe552b331b0b77adc96e04d7385b
+  sha256: 56dd8e955bd3817ca393e8c06ad4475120ec9ff9bbd6ad5f1de90ec0f0dd46de
 
 build:
   noarch: python
