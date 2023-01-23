@@ -27,7 +27,7 @@ requirements:
     - pyfiglet
   run:
     - python >=3.6
-    - numpy
+    - numpy <1.23,>=1.18
     - scipy
     - lazy-property
     - colorama
@@ -39,9 +39,10 @@ requirements:
     - numba
     - matplotlib-base
     - ray-core
-    - spglib
+    - spglib <2
     - sympy
     - untangle
+    - protobuf =3.20.2
 
 test:
   imports:
