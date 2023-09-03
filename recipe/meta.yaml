@@ -1,13 +1,13 @@
 {% set name = "wannierberri" %}
-{% set version = "0.13.5" %}
+{% set version = "0.14.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/stepan-tsirkin/wannier-berri/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 56dd8e955bd3817ca393e8c06ad4475120ec9ff9bbd6ad5f1de90ec0f0dd46de
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 0c53e5a8872d98b1bd887e27e27b7b6c3de17964c65b2404a5d62243c8aa2352
 
 build:
   noarch: python
@@ -27,7 +27,7 @@ requirements:
     - pyfiglet
   run:
     - python >=3.6
-    - numpy <1.23,>=1.18
+    - numpy <1.25,>=1.24
     - scipy
     - lazy-property
     - colorama
@@ -43,6 +43,7 @@ requirements:
     - sympy
     - untangle
     - protobuf =3.20.2
+    - irrep
 
 test:
   imports:
