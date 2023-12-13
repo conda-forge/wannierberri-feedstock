@@ -44,6 +44,7 @@ requirements:
     - untangle
     - protobuf =3.20.2
     - irrep
+    - wannier90io
 
 test:
   imports:
