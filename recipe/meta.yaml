@@ -11,39 +11,22 @@ source:
 
 build:
   noarch: python
-  number: 0
-  script: {{ PYTHON }} -m pip install . -vv
+  number: 1
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
-    - numpy
-    - scipy
-    - lazy-property
-    - pyfftw
-    - colorama
-    - termcolor
-    - pyfiglet
   run:
-    - python >=3.6
+    - python >=3.7
     - numpy <1.25,>=1.24
-    - scipy
-    - lazy-property
+    - scipy >=1.0
     - colorama
     - termcolor
-    - pyfiglet
-    - pyfftw
-    - fortio
-    - packaging
-    - numba
-    - matplotlib-base
-    - ray-core
-    - spglib <2
-    - sympy
-    - untangle
-    - protobuf =3.20.2
-    - irrep
+    - numba >=0.55.2
+    - packaging >=20.8
+    - fortio >=0.4
     - wannier90io
 
 test:
