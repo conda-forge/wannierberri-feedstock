@@ -30,6 +30,7 @@ requirements:
     - fortio >=0.4
     - wannier90io
     - irrep
+    - sympy
 
 test:
   imports:
