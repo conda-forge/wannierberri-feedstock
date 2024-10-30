@@ -29,6 +29,7 @@ requirements:
     - packaging >=20.8
     - fortio >=0.4
     - wannier90io
+    - irrep
 
 test:
   imports:
