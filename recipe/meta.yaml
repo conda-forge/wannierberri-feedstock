@@ -1,5 +1,5 @@
 {% set name = "wannierberri" %}
-{% set version = "0.17.0" %}
+{% set version = "1.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,17 +7,18 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f54b34bf59e8c5c4fefd5be8f2623dd6943ec596dc39dbb29d3690e5b1cb920d
+  sha256: 8a5cb436d2664ce06c153c214f8f13b6647242632724f5fd151a283d36bb8af2
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
     - python >=3.7
     - pip
+    - setuptools
   run:
     - python >=3.7
     - numpy <1.25,>=1.24
@@ -28,6 +29,8 @@ requirements:
     - packaging >=20.8
     - fortio >=0.4
     - wannier90io
+    - irrep
+    - sympy
 
 test:
   imports:
