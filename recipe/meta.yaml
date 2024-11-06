@@ -1,5 +1,5 @@
 {% set name = "wannierberri" %}
-{% set version = "1.0.1" %}
+{% set version = "1.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8a5cb436d2664ce06c153c214f8f13b6647242632724f5fd151a283d36bb8af2
+  sha256: 4048e0e5e3e7b33b2eb06ebf89dc8c0a362f50b5cfd5d094e4c0dbd8fc02f58e
 
 build:
   noarch: python
@@ -21,8 +21,8 @@ requirements:
     - setuptools
   run:
     - python >=3.7
-    - numpy <1.25,>=1.24
-    - scipy >=1.0
+    - numpy >=2.0
+    - scipy >=1.13
     - colorama
     - termcolor
     - numba >=0.55.2
