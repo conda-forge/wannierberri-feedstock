@@ -1,5 +1,5 @@
 {% set name = "wannierberri" %}
-{% set version = "1.0.2" %}
+{% set version = "1.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4048e0e5e3e7b33b2eb06ebf89dc8c0a362f50b5cfd5d094e4c0dbd8fc02f58e
+  sha256: 9adfbe0f81156d1d64a3a029258f1b4cab83c2ddcfcae23483173a6ad0eafba0
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
