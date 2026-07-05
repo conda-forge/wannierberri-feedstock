@@ -1,5 +1,6 @@
 {% set name = "wannierberri" %}
 {% set version = "26.4.6" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
