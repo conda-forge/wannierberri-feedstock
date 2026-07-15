@@ -1,5 +1,5 @@
 {% set name = "wannierberri" %}
-{% set version = "26.4.6" %}
+{% set version = "26.7.0" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ca219dd45f955dd87c0d8de5c19697dc9cf7ac1b763ae847298f27cb242c3c86
+  sha256: 662a8a906acfddee7c1d0ba50974ef195ec0ffa47997da0954cc077e7ff040c2
 
 build:
   noarch: python
