@@ -1,0 +1,62 @@
+schema_version: 1
+
+context:
+  name: wannierberri
+  version: "26.10"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  sha256: b917a83465fc42053ede61b5811b8962f633d56a1980e9a11683ae9a37b0a8fc
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - setuptools
+  run:
+    - python >=${{ python_min }}
+    - numpy >=2.0
+    - scipy >=1.13
+    - colorama
+    - termcolor
+    - numba >=0.55.2
+    - packaging >=20.8
+    - fortio >=0.4
+    - wannier90io
+    - irrep
+    - sympy
+
+tests:
+  - python:
+      imports:
+        - wannierberri
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+
+about:
+  license: GPL-2.0-only
+  license_file: LICENSE
+  summary: Advanced tool for Wannier interpolation and integration of k-space integrals
+  description: |
+    Evaluation of k-space integrals of Berry curvature, orbital moment and
+    derived quantities by means of MLWFs or tight-binding models. Compared
+    to postw90.x part of Wannier90 code, it has extended functional and
+    improved performance
+  homepage: http://wannier-berri.org
+  repository: https://github.com/stepan-tsirkin/wannier-berri
+  documentation: http://wannier-berri.org
+
+extra:
+  recipe-maintainers:
+    - jan-janssen

@@ -3,7 +3,7 @@ About wannierberri-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/wannierberri-feedstock/blob/main/LICENSE.txt)
 
-Home: http://wannier-berri.org
+Home: http://wannier-berri.org/
 
 Package license: GPL-2.0-only
 
@@ -11,13 +11,12 @@ Summary: Advanced tool for Wannier interpolation and integration of k-space inte
 
 Development: https://github.com/stepan-tsirkin/wannier-berri
 
-Documentation: http://wannier-berri.org
+Documentation: http://wannier-berri.org/
 
 Evaluation of k-space integrals of Berry curvature, orbital moment and
 derived quantities by means of MLWFs or tight-binding models. Compared
 to postw90.x part of Wannier90 code, it has extended functional and
 improved performance
-
 
 Current build status
 ====================
@@ -199,7 +198,4 @@ Feedstock Maintainers
 =====================
 
 * [@jan-janssen](https://github.com/jan-janssen/)
-
-
-<!-- dummy commit to enable rerendering -->
 
