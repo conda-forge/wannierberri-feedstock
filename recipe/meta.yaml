@@ -1,5 +1,5 @@
 {% set name = "wannierberri" %}
-{% set version = "26.7.0" %}
+{% set version = "26.10" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 662a8a906acfddee7c1d0ba50974ef195ec0ffa47997da0954cc077e7ff040c2
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: b917a83465fc42053ede61b5811b8962f633d56a1980e9a11683ae9a37b0a8fc
 
 build:
   noarch: python
