@@ -31,6 +31,7 @@ requirements:
     - packaging >=20.8
     - wannier90io
     - opt_einsum
+    - numba
 tests:
   - python:
       imports:
